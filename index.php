@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    
+    echo("<h1>Witam<h1>");
     ?>
 </body>
 </html>
