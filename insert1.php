@@ -16,6 +16,6 @@ $conn->query($sql3);
     
 
 mysqli_close($conn);
-    header("Location:index.php");
+    header("Location:index2.php");
     
 ?>

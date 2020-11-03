@@ -24,11 +24,11 @@
 <html>
    
    <head>
-      <title>Login Page</title>
+      <title>Logowanie</title>
       
       <style type = "text/css">
          body {
-            font-family:Arial, Helvetica, sans-serif;
+            font-family:Georgia, Helvetica, sans-serif;
             font-size:14px;
          }
          label {
@@ -57,7 +57,7 @@
                   <input type = "submit" value = " Submit "/><br />
                </form>
                
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"></div>
+               <div style = "font-size:11px; color:#cc0000; margin-top:10px">Login:a Hasło:a</div>
 					
             </div>
 				
