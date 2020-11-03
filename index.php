@@ -40,29 +40,5 @@
     }
 
 ?>
-<br>
-<?php
-           $conn=new mysqli('remotemysql.com', 'UUonl7aZfV', 'e1PMNo8gnJ', 'UUonl7aZfV', '3306');
-           $result2 = $conn->query("SELECT * FROM autorzy");
-
-           echo("<form action='insert2.php' method='POST'  >");
-           echo("<select name='auts'>");
-           while($row=$result2->fetch_assoc() ){
-           echo("<option value='".$row['id_autor']."'>".$row['autor']."</option>");
-           }
-           echo("</select>");
-
-           $result3 = $conn->query("SELECT * FROM tytuly");
-
-           echo("<select name='tyts'>");
-           while($row=$result3->fetch_assoc() ){
-           echo("<option value='".$row['id_tytul']."'>".$row['tytul']."</option>");
-           }           
-           echo("</select>");
-
-           echo("<input type='submit' value='Zapisz'>");
-           echo("</form>");
-         ?>
-         <br>
 </body>
 </html>
