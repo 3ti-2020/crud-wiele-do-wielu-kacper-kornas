@@ -8,16 +8,12 @@
 <body>
 <h1>Witam<h1>
 
-<h3>Autor</h3>
-          <form action="insert.php" method="post">
+<h3>Dodaj Książkę</h3>
+          <form action="insert1.php" method="post">
               <input type="text" name="autor" >
+              <input type="text" name="tytul" >
               <input type="submit" value="Zapisz">
           </form>
-<h3>Tytuł</h3>
-          <form action="insert1.php" method="post" >
-              <input type="text" name="tytul" >
-              <input type="submit" value="Zapisz">   
-              </form>
     <?php
 
     $conn=new mysqli('remotemysql.com', 'UUonl7aZfV', 'e1PMNo8gnJ', 'UUonl7aZfV', '3306');
