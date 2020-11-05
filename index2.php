@@ -18,6 +18,8 @@
               <br>
               <input type="submit" value="Zapisz" class="zapisz">
           </form>
+
+          
         </div>
 
 <div class="box box2"></div>
@@ -26,7 +28,9 @@
         <button class="btn"><a  href="kartki.html">Salon Samochodowy</a></button>
 
     </div>
-<div class="box box5"></div>
+<div class="box box5">
+<button class="btn"><a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kacper-kornas">Powrót Do Github</a></button>
+</div>
 <div class="box box3">
 <?php
     $conn=new mysqli('remotemysql.com', 'UUonl7aZfV', 'e1PMNo8gnJ', 'UUonl7aZfV', '3306');
@@ -37,6 +41,7 @@
     <th>ID Książki</th>
     <th>Autor</th>
     <th>Tytuł</th>
+    <th>Del</th>
     </tr>");
 
     while($row=$result->fetch_assoc() ){
@@ -44,7 +49,10 @@
         echo("<td>".$row['id_krzyz']."</td>");
         echo("<td>".$row['autor']."</td>");
         echo("<td>".$row['tytul']."</td>");
-   
+        echo("<td><form action='delete.php' method='POST'>
+        <input style='display: none' value=".$row['id_krzyz']." name='id_krzyz'>
+        <input class='del' type='submit' value='X'>
+        </form></td>");
         echo("</tr>");
     }
 ?>

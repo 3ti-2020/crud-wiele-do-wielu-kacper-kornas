@@ -155,8 +155,8 @@ i {
 }
 .powrot{
     position: absolute;
-    margin-right: 90%;
-    margin-bottom: 43%;
+    top: 25px;
+    left: 25px;
     background-color: rgb(0, 0, 0);
     border-radius: 8px;
     border: none;
