@@ -10,6 +10,7 @@
 
 <div class="container">
 <div class="box box1">
+<h2>Kacper Kornas Gr.2</h2>
 <h2>Dodaj Książkę</h2>
           <form action="insert1.php" method="post">
               <input type="text" name="autor" placeholder="Autor" class="inp" >
