@@ -37,6 +37,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .box4 {
@@ -52,8 +53,8 @@ body{
     grid-column: 1 / 9;
     grid-row: 7 / 9;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .btn {
