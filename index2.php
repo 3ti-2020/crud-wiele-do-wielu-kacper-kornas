@@ -23,7 +23,8 @@
           
         </div>
 
-<div class="box box2"></div>
+<div class="box box2">
+</div>
 <div class="box box4">
         <button class="btn"><a  href="index.php">Wyloguj</a></button>
         <button class="btn"><a  href="kartki.html">Salon Samochodowy</a></button>
@@ -31,6 +32,24 @@
     </div>
 <div class="box box5">
 <button class="btn"><a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kacper-kornas">Powrót Do Github</a></button>
+
+<form action="insert2.php" method="post">
+              <input type="text" name="Imie" placeholder="Imie" class="inp" >
+              <br> 
+              <input type="text" name="Nazwisko" placeholder="Nazwisko" class="inp" >
+              <br>
+              <select name="tytul">
+                <option>Bolesław Prus - Lalka</option>
+                <option>Stefan Żeromski - Ludzie Bezdomni</option>
+                <option>Juliusz Słowacki - Lalka</option>
+                <option>Henryk Sienkiewicz - W pustyni i w puszczy</option>
+            </select>
+              <br>
+              <input type="date" name="DataW" placeholder="Data Wyp" class="inp" >
+              <br>
+              <input type="submit" value="Zapisz" class="Dodaj">
+          </form>
+
 </div>
 <div class="box box3">
 <?php
@@ -56,9 +75,10 @@
         </form></td>");
         echo("</tr>");
     }
-?>
+    ?>
 </div>
 </div>
 </div>
 </body>
+<script src="script.js"></script>
 </html>
