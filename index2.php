@@ -33,7 +33,7 @@
 <div class="box box5">
 <button class="btn"><a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kacper-kornas">Powrót Do Github</a></button>
 
-<form action="insert2.php" method="post">
+<form action="instert_wyp.php" method="post">
               <input type="text" name="Imie" placeholder="Imie" class="inp" >
               <br> 
               <input type="text" name="Nazwisko" placeholder="Nazwisko" class="inp" >
@@ -72,6 +72,30 @@
         echo("<td><form action='delete.php' method='POST'>
         <input style='display: none' value=".$row['id_krzyz']." name='id_krzyz'>
         <input class='del' type='submit' value='X'>
+        </form></td>");
+        echo("</tr>");
+    }
+
+    $result2 = $conn->query("SELECT * FROM wyporzyczenia");
+            
+    echo("<table class='tabelka'");
+    echo("<tr>
+    <th>Imie</th>
+    <th>Nazwisko</th>
+    <th>Tytuł</th>
+    <th>Data Wyp</th>
+    <th>Oddaj</th>
+    </tr>");
+
+    while($row=$result2->fetch_assoc() ){
+        echo("<tr>");
+        echo("<td>".$row['Imie']."</td>");
+        echo("<td>".$row['Nazwisko']."</td>");
+        echo("<td>".$row['tytul']."</td>");
+        echo("<td>".$row['Data_wyp']."</td>");
+        echo("<td><form action='delete.php' method='POST'>
+        <input style='display: none' value=".$row['id_krzyz']." name='id_krzyz'>
+        <input class='del' type='submit' value='Oddaj'>
         </form></td>");
         echo("</tr>");
     }
