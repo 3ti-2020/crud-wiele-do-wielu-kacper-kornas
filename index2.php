@@ -33,21 +33,27 @@
 <div class="box box5">
 <button class="btn"><a href="https://github.com/3ti-2020/crud-wiele-do-wielu-kacper-kornas">Powrót Do Github</a></button>
 
-<form action="instert_wyp.php" method="post">
-              <input type="text" name="Imie" placeholder="Imie" class="inp" >
+<form action="insert_wyp.php" method="post">
+              <input type="text" name="imie" placeholder="Imie" class="inp" >
               <br> 
-              <input type="text" name="Nazwisko" placeholder="Nazwisko" class="inp" >
+              <input type="text" name="nazwisko" placeholder="Nazwisko" class="inp" >
               <br>
               <select name="tytul">
-                <option>Bolesław Prus - Lalka</option>
-                <option>Stefan Żeromski - Ludzie Bezdomni</option>
-                <option>Juliusz Słowacki - Lalka</option>
-                <option>Henryk Sienkiewicz - W pustyni i w puszczy</option>
+              <?php
+              $conn=new mysqli('remotemysql.com', 'UUonl7aZfV', 'e1PMNo8gnJ', 'UUonl7aZfV', '3306');
+              $wynik = mysqli_query($conn,"SELECT tytul FROM tytuly");
+
+              while($row = mysqli_fetch_array($wynik)){
+
+                  echo("<option>".$row['tytul']."</option>");
+              }
+
+
+              mysqli_close($conn);
+              ?>
             </select>
               <br>
-              <input type="date" name="DataW" placeholder="Data Wyp" class="inp" >
-              <br>
-              <input type="submit" value="Zapisz" class="Dodaj">
+              <input type="submit" value="Wypożycz" class="zapisz">
           </form>
 
 </div>
@@ -76,10 +82,11 @@
         echo("</tr>");
     }
 
-    $result2 = $conn->query("SELECT * FROM wyporzyczenia");
+    $result2 = $conn->query("SELECT * FROM wyp");
             
     echo("<table class='tabelka'");
     echo("<tr>
+    <th>Id Wyp</th>
     <th>Imie</th>
     <th>Nazwisko</th>
     <th>Tytuł</th>
@@ -89,12 +96,13 @@
 
     while($row=$result2->fetch_assoc() ){
         echo("<tr>");
-        echo("<td>".$row['Imie']."</td>");
-        echo("<td>".$row['Nazwisko']."</td>");
+        echo("<td>".$row['id_wyp']."</td>");
+        echo("<td>".$row['imie']."</td>");
+        echo("<td>".$row['nazwisko']."</td>");
         echo("<td>".$row['tytul']."</td>");
-        echo("<td>".$row['Data_wyp']."</td>");
-        echo("<td><form action='delete.php' method='POST'>
-        <input style='display: none' value=".$row['id_krzyz']." name='id_krzyz'>
+        echo("<td>".$row['data_wyp']."</td>");
+        echo("<td><form action='del_wyp.php' method='POST'>
+        <input style='display: none' value=".$row['id_wyp']." name='id_wyp'>
         <input class='del' type='submit' value='Oddaj'>
         </form></td>");
         echo("</tr>");
