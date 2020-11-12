@@ -35,7 +35,7 @@ body{
     grid-column: 2 / 7;
     grid-row: 3 / 7;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
