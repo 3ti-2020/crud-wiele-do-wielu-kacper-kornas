@@ -1,0 +1,1 @@
+pomoc w  sprawdzaniu
