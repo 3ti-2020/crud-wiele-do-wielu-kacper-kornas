@@ -8,15 +8,29 @@ body {
     background: linear-gradient(155deg, rgba(179,78,78,1) 0%, rgba(65,187,28,1) 50%, rgba(252,176,69,1) 100%);
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .question {
-    border: 2px dashed purple;
+    border: 2px solid purple;
     border-radius: 25px;
+    width: 1700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .question2 {
-    border: 2px dashed purple;
+    border: 2px solid purple;
     border-radius: 25px;
-    margin-top: 5px;
+    margin-top: 10px;
+    width: 1700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
